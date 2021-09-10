@@ -55,7 +55,7 @@ export default function Home() {
             <div className={style.navbar + " row col-12 mx-auto p-0 fixed-top"}>
                 <Navbar />
             </div>
-            <div className={style.main + " row col-12 ms-1 mx-sm-auto p-0  mt-5"}>
+            <div className={style.main + " row col-12  mx-sm-auto p-0  mt-5"}>
                 <Main />
             </div>
             <div className={style.content + " row col-12  mx-auto p-0"}>
