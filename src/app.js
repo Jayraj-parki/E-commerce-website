@@ -10,14 +10,14 @@ app.use(express.json())
  
 app.use(require('./router/routes'))
 
-app.use(express.static(path.join(__dirname,"../client/build")));
+app.use(express.static(path.join(__dirname,"../amazon-affiliate-app/build")));
 
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname,"../client/build", "index.html"));
+    res.sendFile(path.join(__dirname,"../amazon-affiliate-app/build", "index.html"));
   });
 
 if(process.env.NODE_ENV=="production"){
-    app.use(express.static("client/build"))
+    app.use(express.static("amazon-affiliate-app/build"))
 }
 app.listen(PORT,()=>{
     console.log("listening at "+PORT)
