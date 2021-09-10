@@ -14,7 +14,7 @@ export default function RecentCard() {
                 body: JSON.stringify({
                     subcategory: "All",
                     category:"All"
-                })
+                }) 
             })
             const data = await result.json()
 

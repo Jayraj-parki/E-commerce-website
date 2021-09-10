@@ -36,7 +36,7 @@ export default function PopularCard() {
                 product?.map((val,index) =>
                     <div key={val._id+""+index} className={style.card + " card shadow col-12 col-sm-6 bg-light col-xl-12 p-0 px-2 "} >
                         <div className={style.mydiv + " row g-0 p-0"}>
-                            <div className={style.image + " col-md-4 py-2"}>
+                            <div className={style.image + " col-6 col-md-4 py-2"}>
                                 <a href={val.ahref} target="_blank">
                                     <img border="0" src={val.srclink} />
                                 </a>
