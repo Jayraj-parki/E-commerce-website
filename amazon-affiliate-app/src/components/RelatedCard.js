@@ -20,7 +20,7 @@ export default function RelatedCard() {
             const data = await result.json()
             if (result.status === 201) {
                 setProduct([...data.reverse()])
-            }
+            } 
         }
         catch (err) {
             console.log("error in getData :" + err)

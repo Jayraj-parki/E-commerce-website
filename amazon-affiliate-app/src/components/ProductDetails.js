@@ -29,6 +29,7 @@ export default function ProductDetails(props) {
             }
             else {
                 setProduct([...data])
+                // props.handle()
             }
 
         } catch (err) {

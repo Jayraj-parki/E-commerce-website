@@ -11,13 +11,13 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 export default function RelatedProduct(props) {
     const [search, setSearch] = useState("")
     const [show, setShow] = useState(false)
-
+ 
     return (
         <>
             <div className={style.product_container + " row col-12  p-2 mx-auto my-4"}>
                 <div className={style.heading + " row mx-auto col-12  p-2 px-3 mt-2"}>
                     <h1 className=" my-auto  text-center col-auto m-0 p-1 px-3 rounded">Related Product <ArrowRightIcon/></h1>
-                    <Button onClick={() => window.open(props.link, "_blank")} className="col-auto ms-auto  px-3 pb-1">See More Product On Amazon<ArrowRightIcon className="m-0" /></Button>
+                    <Button onClick={() => window.open("https://amzn.to/3toFBIh", "_blank")} className="col-auto ms-auto  px-3 pb-1">See More Product On Amazon<ArrowRightIcon className="m-0" /></Button>
                 </div>
                 <IconButton onClick={()=>document.getElementById("related_products").scrollBy({
                     left: -500,behavior:"smooth"
