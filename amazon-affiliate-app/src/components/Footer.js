@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import style from "./style/Footer.module.scss"
 import { Button } from '@material-ui/core'
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
@@ -11,16 +11,16 @@ import IconButton from '@material-ui/core/IconButton';
 import PolicyIcon from '@material-ui/icons/Policy';
 import DescriptionIcon from '@material-ui/icons/Description';
 export default function Footer() {
-    const [contact,setContact]=useState({
-        name:"",
-        email:"",
-        message:""
-    }) 
-    const {name,email,message}=contact
-    const HandleForm=(e)=>{
-        const name=e.target.name;
-        const value=e.target.value;
-        setContact({...contact,[name]:value})
+    const [contact, setContact] = useState({
+        name: "",
+        email: "",
+        message: ""
+    })
+    const { name, email, message } = contact
+    const HandleForm = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setContact({ ...contact, [name]: value })
     }
     const SaveMessage = async (e) => {
         try {
@@ -28,9 +28,9 @@ export default function Footer() {
                 method: "POST",
                 headers: {
                     "Content-type": "application/json"
-                }, 
+                },
                 body: JSON.stringify({
-                    name,email,message
+                    name, email, message
                 })
             })
             const data = await result.json()
@@ -44,7 +44,7 @@ export default function Footer() {
         } catch (err) {
             alert("Error in Sending message! please try again Later.")
         }
-    } 
+    }
     return (
         <>
             <div className={style.about + "  m-0 row col-xl-4  "}>
@@ -100,14 +100,14 @@ export default function Footer() {
 
             <form id="contact" className={style.contact + "  m-0 row col-xl-4 "}>
                 <h2 className="my-3 px-0">Contact Us<ArrowRightIcon className={style.icon} /></h2>
-                <div className={style.input+"  col-sm-6 p-0 px-2 m-0 mb-3"}>
+                <div className={style.input + "  col-sm-6 p-0 px-2 m-0 mb-3"}>
                     <input name="email" value={email} onChange={HandleForm} autoComplete="off" type="email" className="form-control col-12" placeholder="abc@gmail.com" id="exampleInputEmail1" aria-describedby="emailHelp" />
                 </div>
-                <div className={style.input+"  col-sm-6 p-0 px-2 m-0 mb-3"}>
-                    <input name="name"  value={name} onChange={HandleForm} autoComplete="off" type="text" className="form-control col-12" placeholder="Full name" id="exampleInputPassword1" />
+                <div className={style.input + "  col-sm-6 p-0 px-2 m-0 mb-3"}>
+                    <input name="name" value={name} onChange={HandleForm} autoComplete="off" type="text" className="form-control col-12" placeholder="Full name" id="exampleInputPassword1" />
                 </div>
-                <div className={style.input+"  col-12 px-2 m-0 mb-4"}>
-                    <textarea name="message"  value={message} onChange={HandleForm} autoComplete="off" className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <div className={style.input + "  col-12 px-2 m-0 mb-4"}>
+                    <textarea name="message" value={message} onChange={HandleForm} autoComplete="off" className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
                 </div>
                 <Button onClick={() => window.open("https://forms.gle/v2mYhMfKupC94t3o7", "_blank")} className=" col-sm-7 mx-2 my-1 my-sm-auto me-sm-auto">Contact by Google form <OpenInNewIcon className="ms-2" /></Button>
                 <Button onClick={SaveMessage} className=" col-sm-4 my-1 my-sm-auto mx-2 ms-sm-auto ">Send Message</Button>
@@ -116,11 +116,9 @@ export default function Footer() {
                         <NavLink className="nav-link p-0 m-0" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <IconButton className={style.icon_container + " col-auto m-0 p-0"}> <YouTubeIcon className={style.youtube + " col-12 m-2"} /></IconButton>
                         </NavLink>
-                        <ul className={style.menu+ " dropdown-menu "} aria-labelledby="navbarDropdown">
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Smart Gadgets</NavLink></li>
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Home Products</NavLink></li>
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Fashion Product</NavLink></li>
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Helath and fitness</NavLink></li>
+                        <ul className={style.menu + " dropdown-menu "} aria-labelledby="navbarDropdown">
+                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://youtube.com/channel/UC-9WJOe3jEkUoHr7t0pX5hw", "_blank")}>Smart Gadgets</NavLink></li>
+                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://youtube.com/channel/UCatX_dmjk_uz32JFePx6TpQ", "_blank")}>Helath and fitness</NavLink></li>
                         </ul>
                     </li>
                     <li className={style.social_media + " col-auto mx-auto dropdown  p-0 mx-2"}>
@@ -128,10 +126,10 @@ export default function Footer() {
                             <IconButton className={style.icon_container + " col-auto m-0 p-0"}> <FacebookIcon className={style.youtube + " col-12 m-2"} /></IconButton>
                         </NavLink>
                         <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Smart Gadgets</NavLink></li>
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Home Products</NavLink></li>
+                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Not Avaliable</NavLink></li>
+                            {/* <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Home Products</NavLink></li>
                             <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Fashion Product</NavLink></li>
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Helath and fitness</NavLink></li>
+                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Helath and fitness</NavLink></li> */}
                         </ul>
                     </li>
                     <li className={style.social_media + " col-auto mx-auto dropdown  p-0 mx-2"}>
@@ -139,17 +137,15 @@ export default function Footer() {
                             <IconButton className={style.icon_container + " col-auto m-0 p-0"}> <InstagramIcon className={style.youtube + " col-12 m-2"} /></IconButton>
                         </NavLink>
                         <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Smart Gadgets</NavLink></li>
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Home Products</NavLink></li>
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Fashion Product</NavLink></li>
-                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Helath and fitness</NavLink></li>
+                            <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://instagram.com/budget_product_?utm_medium=copy_link", "_blank")}>Budget Product</NavLink></li>
+
                         </ul>
                     </li>
                 </ul>
-                <div className={style.policy+ " row col-12 mx-auto mt-5 p-0"}>
-                    <NavLink className={style.links+" col-7 col-sm-6  "} onClick={() => window.open("terms-and-conditions", "_blank")} to="/"><DescriptionIcon className={style.icon + " ms-1 "} />Terms & Conditions</NavLink>
-                    <NavLink className={style.links+" col-5 col-sm-5  ms-auto"} onClick={() => window.open("/privacy", "_blank")} to="/">Policy Privacy<PolicyIcon className={style.icon + " ms-1"} /></NavLink>
-                    <NavLink className={style.links+" col-sm-6 mx-auto py-2"} onClick={() => window.open("https://amzn.to/2VcqPrk", "_blank")} to="/">Visit Amazon.in<OpenInNewIcon className={style.icon + " ms-1"} /></NavLink>
+                <div className={style.policy + " row col-12 mx-auto mt-5 p-0"}>
+                    <NavLink className={style.links + " col-7 col-sm-6  "} onClick={() => window.open("terms-and-conditions", "_blank")} to="/"><DescriptionIcon className={style.icon + " ms-1 "} />Terms & Conditions</NavLink>
+                    <NavLink className={style.links + " col-5 col-sm-5  ms-auto"} onClick={() => window.open("/privacy", "_blank")} to="/">Policy Privacy<PolicyIcon className={style.icon + " ms-1"} /></NavLink>
+                    <NavLink className={style.links + " col-sm-6 mx-auto py-2"} onClick={() => window.open("https://amzn.to/2VcqPrk", "_blank")} to="/">Visit Amazon.in<OpenInNewIcon className={style.icon + " ms-1"} /></NavLink>
                 </div>
             </form>
             <div className={style.copyright + "  mt-3 row mx-auto col-12 "}>

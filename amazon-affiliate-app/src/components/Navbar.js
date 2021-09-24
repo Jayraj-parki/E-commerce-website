@@ -115,10 +115,8 @@ export default function Navbar() {
                                     <IconButton onClick={dropUp} className={style.icon_container + " col-auto m-0 p-0 "}> <YouTubeIcon className={style.youtube + " col-12 m-2"} /></IconButton>
                                 </NavLink>
                                 <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Smart Gadgets</NavLink></li>
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Home Products</NavLink></li>
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Fashion Product</NavLink></li>
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Helath and fitness</NavLink></li>
+                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://youtube.com/channel/UC-9WJOe3jEkUoHr7t0pX5hw", "_blank")}>Smart Gadgets</NavLink></li>
+                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://youtube.com/channel/UCatX_dmjk_uz32JFePx6TpQ", "_blank")}>Helath and fitness</NavLink></li>
                                 </ul>
                             </li>
                             <li className={style.social_media + " nav-item dropdown  p-0 mx-2"}>
@@ -126,10 +124,10 @@ export default function Navbar() {
                                     <IconButton onClick={dropUp} className={style.icon_container + " col-auto m-0 p-0"}> <FacebookIcon className={style.youtube + " col-12 m-2"} /></IconButton>
                                 </NavLink>
                                 <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Smart Gadgets</NavLink></li>
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Home Products</NavLink></li>
+                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Not Available</NavLink></li>
+                                    {/* <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Home Products</NavLink></li>
                                     <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Fashion Product</NavLink></li>
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Helath and fitness</NavLink></li>
+                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Helath and fitness</NavLink></li> */}
                                 </ul>
                             </li>
                             <li className={style.social_media + " nav-item dropdown  p-0 mx-2"}>
@@ -137,10 +135,8 @@ export default function Navbar() {
                                     <IconButton onClick={dropUp} className={style.icon_container + " col-auto m-0 p-0"}> <InstagramIcon className={style.youtube + " col-12 m-2"} /></IconButton>
                                 </NavLink>
                                 <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Smart Gadgets</NavLink></li>
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Home Products</NavLink></li>
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Fashion Product</NavLink></li>
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#">Helath and fitness</NavLink></li>
+                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://instagram.com/budget_product_?utm_medium=copy_link", "_blank")}>Budget Product</NavLink></li>
+                                   
                                 </ul>
                             </li>
                         </ul>
