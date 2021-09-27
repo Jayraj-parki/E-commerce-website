@@ -115,7 +115,7 @@ export default function Navbar() {
                                     <IconButton onClick={dropUp} className={style.icon_container + " col-auto m-0 p-0 "}> <YouTubeIcon className={style.youtube + " col-12 m-2"} /></IconButton>
                                 </NavLink>
                                 <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://youtube.com/channel/UC-9WJOe3jEkUoHr7t0pX5hw", "_blank")}>Smart Gadgets</NavLink></li>
+                                    {/* <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://youtube.com/channel/UC-9WJOe3jEkUoHr7t0pX5hw", "_blank")}>Smart Gadgets</NavLink></li> */}
                                     <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://youtube.com/channel/UCatX_dmjk_uz32JFePx6TpQ", "_blank")}>Helath and fitness</NavLink></li>
                                 </ul>
                             </li>
@@ -135,7 +135,7 @@ export default function Navbar() {
                                     <IconButton onClick={dropUp} className={style.icon_container + " col-auto m-0 p-0"}> <InstagramIcon className={style.youtube + " col-12 m-2"} /></IconButton>
                                 </NavLink>
                                 <ul className="dropdown-menu " aria-labelledby="navbarDropdown">
-                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://instagram.com/budget_product_?utm_medium=copy_link", "_blank")}>Budget Product</NavLink></li>
+                                    <li className="px-1"><NavLink className={style.dropdown_item + " dropdown-item my-1 "} to="#" onClick={() => window.open("https://www.instagram.com/health_fitness231/?utm_medium=copy_link", "_blank")}>health_and_fitness</NavLink></li>
                                    
                                 </ul>
                             </li>
